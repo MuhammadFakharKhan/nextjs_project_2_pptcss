@@ -1,21 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import 'animate.css';
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@layer components {
+  .nav-Links {
+    @apply relative text-base font-medium text-center w-fit block text-white;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  .nav-Links::after {
+    @apply block absolute h-[3px] bg-white w-full scale-x-0 transition-transform duration-150 origin-left;
+    content: '';
+  }
+
+  .nav-Links:hover::after {
+    transform: scaleX(1);
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
+

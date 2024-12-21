@@ -1,101 +1,160 @@
+import React from "react";
+import Link from "next/link";
 import Image from "next/image";
+import "animate.css";
 
-export default function Home() {
+const HomePage = () => {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="bg-gray-100 min-h-screen">
+      {/* Hero Section */}
+      <section className="bg-black text-white py-20 text-center animate__animated animate__fadeIn">
+        <h1 className="text-4xl md:text-6xl font-bold mb-4 animate__animated animate__fadeInDown">Welcome to My Portfolio</h1>
+        <p className="text-lg md:text-2xl animate__animated animate__fadeInUp animate__delay-1s">Showcasing my projects and skills</p>
+      </section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* About Me Preview */}
+      <section className="py-20 text-center animate__animated animate__fadeIn animate__delay-2s">
+        <h2 className="text-3xl font-bold mb-6">About Me</h2>
+        <div className="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-6">
+          <Image 
+            src="/images/fk pic5.png" 
+            alt="About Me Image" 
+            width={300} 
+            height={300} 
+            className="rounded-full shadow-lg animate__animated animate__zoomIn"
+          />
+          <p className="max-w-lg text-lg text-left animate__animated animate__fadeInRight animate__delay-3s">
+            Hi, My name is Muhammad Fakhar Khan. I&apos;m a passionate developer and graphic designer with a knack for creating seamless user experiences and robust web applications. Learn more about my journey and interests on the <Link href="/about" className="text-black hover:underline hover:bg-black hover:text-white font-semibold">About Me</Link> page.
+          </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      {/* Skills Section */}
+      <section className="py-20 text-center animate__animated animate__fadeIn animate__delay-3s">
+        <h2 className="text-3xl font-bold mb-6">My Skills</h2>
+        <div className="flex flex-col items-center space-y-4">
+          <div className="w-full max-w-xl mb-4">
+            <label className="block text-left text-lg font-bold mb-2">HTML</label>
+            <div className="bg-gray-300 w-full h-6 rounded-full">
+              <div className="bg-black h-full rounded-full text-white animate__animated animate__slideInLeft" style={{ width: "90%" }}>90%</div>
+            </div>
+          </div>
+          <div className="w-full max-w-xl mb-4">
+            <label className="block text-left text-lg font-bold mb-2">CSS</label>
+            <div className="bg-gray-300 w-full h-6 rounded-full">
+              <div className="bg-black h-full rounded-full text-white animate__animated animate__slideInLeft" style={{ width: "85%" }}>85%</div>
+            </div>
+          </div>
+          <div className="w-full max-w-xl mb-4">
+            <label className="block text-left text-lg font-bold mb-2">JavaScript</label>
+            <div className="bg-gray-300 w-full h-6 rounded-full">
+              <div className="bg-black h-full rounded-full text-white animate__animated animate__slideInLeft" style={{ width: "75%" }}>75%</div>
+            </div>
+          </div>
+          <div className="w-full max-w-xl mb-4">
+            <label className="block text-left text-lg font-bold mb-2">TypeScript</label>
+            <div className="bg-gray-300 w-full h-6 rounded-full">
+              <div className="bg-black h-full text-white rounded-full animate__animated animate__slideInLeft" style={{ width: "80%" }}>80%</div>
+            </div>
+          </div>
+          <div className="w-full max-w-xl mb-4">
+            <label className="block text-left text-lg font-bold mb-2">Next.js</label>
+            <div className="bg-gray-300 w-full h-6 rounded-full">
+              <div className="bg-black h-full rounded-full text-white animate__animated animate__slideInLeft" style={{ width: "70%" }}>70%</div>
+            </div>
+          </div>
+          <div className="w-full max-w-xl mb-4">
+            <label className="block text-left text-lg font-bold mb-2">Adobe Illustrator</label>
+            <div className="bg-gray-300 w-full h-6 rounded-full">
+              <div className="bg-black h-full rounded-full text-white animate__animated animate__slideInLeft" style={{ width: "90%" }}>90%</div>
+            </div>
+          </div>
+          <div className="w-full max-w-xl mb-4">
+            <label className="block text-left text-lg font-bold mb-2">Adobe Photoshop</label>
+            <div className="bg-gray-300 w-full h-6 rounded-full">
+              <div className="bg-black h-full rounded-full text-white animate__animated animate__slideInLeft" style={{ width: "85%" }}>85%</div>
+            </div>
+          </div>
+          <div className="w-full max-w-xl">
+            <label className="block text-left text-lg font-bold mb-2">Canva</label>
+            <div className="bg-gray-300 w-full h-6 rounded-full">
+              <div className="bg-black h-full rounded-full text-white animate__animated animate__slideInLeft" style={{ width: "70%" }}>70%</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Projects */}
+      <section className="bg-white py-20 text-center animate__animated animate__fadeIn animate__delay-4s">
+        <h2 className="text-3xl font-bold mb-6">Featured Projects</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
+          <div className="bg-gray-200 p-6 rounded-lg shadow-lg animate__animated animate__fadeInUp">
+            <Link href="https://hackathon-project-5.vercel.app/">
+              
+                <Image 
+                  src="/images/coding (1).png" 
+                  alt="Project One" 
+                  width={300} 
+                  height={200} 
+                  className="rounded-lg mb-4"
+                />
+                <h3 className="text-xl font-bold mb-2">HTML & CSS PROJECT</h3>
+                <p className="text-black">Generate a unique URL for each resume based on the user’s username, and allow the resume to be shared and downloaded.</p>
+              
+            </Link>
+          </div>
+          <div className="bg-gray-200 p-6 rounded-lg shadow-lg animate__animated animate__fadeInUp animate__delay-1s">
+            <Link href="/path/to/project-two">
+            
+                <Image 
+                  src="/images/nextjs-img.png" 
+                  alt="Project Two" 
+                  width={300} 
+                  height={200} 
+                  className="rounded-lg mb-4"
+                />
+                <h3 className="text-xl font-bold mb-2">NEXTJS PROJECT</h3>
+                <p className="text-black">This is a brief description of Project Two.</p>
+              
+            </Link>
+          </div>
+          <div className="bg-gray-200 p-6 rounded-lg shadow-lg animate__animated animate__fadeInUp animate__delay-2s">
+            <Link href="https://drive.google.com/file/d/1IE3F8eq-mxt0v3uT3grPqtoKra5jF9-C/view?usp=sharing&usp=embed_facebook">
+            
+                <Image 
+                  src="/images/adobe ai photo.png" 
+                  alt="Project Three" 
+                  width={300} 
+                  height={300} 
+                  className="rounded-lg mb-4"
+                />
+                <h3 className="text-xl font-bold mb-2">GRAPHIC DESIGNING PROJECT</h3>
+                <p className="text-black">My graphic design portfolio.</p>
+              
+            </Link>
+          </div>
+        </div>
+        <p className="mt-8">
+          Explore more projects on the <Link href="/projects" className="text-black hover:bg-black hover:text-white hover:underline font-semibold animate__animated animate__fadeIn">Projects</Link> page.
+        </p>
+      </section>
+
+      {/* Contact Information */}
+      <section className="bg-gray-200 py-20 text-center animate__animated animate__fadeIn animate__delay-5s">
+        <h2 className="text-3xl font-bold mb-6">Contact Me</h2>
+        <p className="text-lg mb-4">Feel free to reach out to me via the following contact information:</p>
+        <div className="flex flex-col items-center space-y-4">
+          <p><strong>Email:</strong> fk8201610@gmail.com</p>
+          <p><strong>Phone:</strong> +923353610778</p>
+          <p><strong>LinkedIn:</strong> <Link href="https://linkedin.com/in/muhammad-fakhar-khan-291bb0226" className="text-black hover:underline hover:bg-black hover:text-white"target="_blank" rel="noopener noreferrer">linkedin.com/in/muhammad-fakhar-khan-291bb0226</Link></p>
+          <p><strong>Github:</strong> <Link href="https://github.com/MuhammadFakharKhan" className="text-black hover:underline hover:bg-black hover:text-white" target="_blank" rel="noopener noreferrer">github.com/MuhammadFakharKhan</Link></p>
+        </div>
+      </section>
     </div>
   );
-}
+};
+
+export default HomePage;
+
+
+
