@@ -42,23 +42,23 @@ const projects = [
       {
         id: "NextJs-Project-1",
         title: "NextJs Project 1",
-        description: "Description for NextJs Project 1.",
+        description: "E Commerce Project",
         image: "/images/nextjs-img.png",
-        url: "https://example.com/nextjs-project-1"
+        url: "https://nextjs-milestone3-proj-ecom-cn6q.vercel.app/"
       },
       {
         id: "NextJs-Project-2",
         title: "NextJs Project 2",
-        description: "Description for NextJs Project 2.",
+        description: "Portfolio with Tailwind CSS",
         image: "/images/nextjs-img.png",
-        url: "https://example.com/nextjs-project-2"
+        url: "https://nextjs-project-2-pptcss.vercel.app/"
       },
       {
         id: "NextJs-Project-3",
         title: "NextJs Project 3",
-        description: "Description for NextJs Project 3.",
+        description: "Portfolio with Custom CSS.",
         image: "/images/nextjs-img.png",
-        url: "https://example.com/nextjs-project-3"
+        url: "https://nextjs-project-2-ppccss-nz3k.vercel.app/"
       },
     ]
   },
@@ -131,14 +131,14 @@ const ProjectPage = () => {
                 <h3 className="text-lg font-bold mb-2">{subproject.title}</h3>
                 <p className="text-gray-700 mb-4">{subproject.description}</p>
                 {subproject.url && (
-                  <Link href={subproject.url} passHref>
-                    <a 
+                  <Link href={subproject.url} passHref
+                     
                       target="_blank" 
                       rel="noopener noreferrer" 
-                      className="inline-block bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-700"
-                    >
+                      className="inline-block bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-700">
+                    
                       Visit Project
-                    </a>
+                    
                   </Link>
                 )}
               </div>
